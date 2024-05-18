@@ -1,0 +1,18 @@
+.divContainer{
+    width: 85%;
+    height: 65%;
+    border: deepskyblue 4px solid;
+    margin: 8px;
+    padding: 8px;
+}
+.productImage{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+img{
+    width: 30%;
+}
