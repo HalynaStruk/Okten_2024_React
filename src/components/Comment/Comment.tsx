@@ -7,14 +7,13 @@ const Comment:FC<IProps> = ({post}) => {
     console.log(post);
     return (
         <div>
-            {post.id}
-            {post.title}
-            {post.body}
-            {post.userId}
-            {post.tags}
-            {post.reactions}
-            <hr/>
-        </div>
+                <h3>{post.id}. {post.title}</h3>
+                <p>{post.body}</p>
+                <h4>posted by user {post.userId}</h4>
+                <ul>{post.tags.map((tag, index) => <li key={index}>tag</li>)}</ul>
+                <p>{post.reactions}</p>
+                <hr/>
+            </div>
     );
 };
 

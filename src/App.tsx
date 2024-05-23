@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import './App.css';
 import Users from "./components/Users/Users";
 import Comments from "./components/Comments/Comments";
-import Comment from "./components/Comment/Comment";
-import post from './components/Comment/Comment'
 
 const App = () => {
 

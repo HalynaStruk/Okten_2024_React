@@ -19,7 +19,7 @@ const Comments: FC<IProps> = ({id: userId}) => {
     return (
         <div>
             {
-                posts.map((post, index) => (<Comment key={index} post={post}/>))
+                posts && posts.map((post, index) => (<Comment key={index} post={post}/>))
             }
         </div>
     );
