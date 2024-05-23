@@ -11,7 +11,7 @@ const Products:FC<IProps> = ({items: productsId}) => {
     return (
         <div>
             {
-                productsId.map((id: ProductModel) => <Product id={id}/>)
+                productsId.map((id: ProductModel) => <Product key={id.id} id={id}/>)
             }
         </div>
     );
