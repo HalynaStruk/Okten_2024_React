@@ -21,7 +21,9 @@ const Product: FC<IProps> = ({id:{id}}) => {
 
     return (
         <div>
-            Product
+            {
+                product && <div>{product.title}</div>
+            }
         </div>
     );
 };

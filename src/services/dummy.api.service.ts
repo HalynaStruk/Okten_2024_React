@@ -1,6 +1,6 @@
 import axios, {AxiosResponse} from 'axios';
 import {CartsResponseModel} from "../models/responseModels/CartsResponseModel";
-import {ProductResponse} from "../models/responseModels/ProductResponse";
+import {FullProductModel} from "../models/FullProductModel";
 
 
 let axiosInstance = axios.create({
@@ -12,7 +12,7 @@ const getAllCarts = ():Promise<AxiosResponse<CartsResponseModel>> => {
     return axiosInstance.get('/carts')
 }
 
-const getProductById = (id: number):Promise<AxiosResponse<ProductResponse>> => {
+const getProductById = (id: number):Promise<AxiosResponse<FullProductModel>> => {
     return axiosInstance.get('/products/' + id)
 }
 
