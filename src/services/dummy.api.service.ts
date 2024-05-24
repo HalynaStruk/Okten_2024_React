@@ -14,7 +14,7 @@ const getAllUsers = (): Promise<AxiosResponse<UsersResponseModels>> => {
 }
 
 const getPostsByUserID = (id: number): Promise<AxiosResponse<PostsResponseModel>> => {
-    return axiosInstance.get(`users/${id}/posts`)
+    return axiosInstance.get('users/' + id +'/posts')
 }
 // '/users/' + id + '/posts'
 export {

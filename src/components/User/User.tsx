@@ -8,6 +8,7 @@ const User: FC<IProps> = ({item, getPostsFromUsers}) => {
 
      const postsDetail = () => {
          getPostsFromUsers(item.id);
+         console.log(item.id);
      }
 
     return (

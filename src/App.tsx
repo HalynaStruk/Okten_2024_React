@@ -5,7 +5,7 @@ import Comments from "./components/Comments/Comments";
 
 const App = () => {
 
-    const [userId, setUserId] = useState<number| null>(null)
+    const [userId, setUserId] = useState<number | null>(null)
 
     const getPostsFromUsers = (id: number) => {
         console.log(id);
