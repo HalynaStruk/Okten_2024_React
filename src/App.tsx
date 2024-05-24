@@ -7,6 +7,7 @@ const App = () => {
 
     const [userId, setUserId] = useState<any>(null);
 
+
     const getPostsFromUsers = (id: number) => {
         setUserId(id);
     }
