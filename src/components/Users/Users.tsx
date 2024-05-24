@@ -2,7 +2,6 @@ import React, {FC, useEffect, useState} from "react";
 import {getAllUsers} from "../../services/dummy.api.service";
 import {UserModel} from "../../models/UserModel";
 import User from "../User/User";
-import {PostModel} from "../../models/PostModel";
 
 interface IProps {
     getPostsFromUsers: (id: number) => void
