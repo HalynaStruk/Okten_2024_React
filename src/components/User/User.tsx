@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useState} from "react";
 import {UserModel} from "../../models/UserModel";
 import {PostModel} from "../../models/PostModel";
 
@@ -10,7 +10,13 @@ const User: FC<IProps> = ({item, getPostsFromUsers}) => {
          getPostsFromUsers(item.id);
          console.log(item.id);
      }
-
+    // const [userId, setUserId] = useState<number | null>(null)
+    //
+    // const getPostsFromUsers = (id: number) => {
+    //     console.log(id);
+    //     setUserId(id)
+    // }
+    // console.log(userId);
     return (
         <div>
             <h2>{item.id}. {item.firstName} {item.lastName}</h2>
