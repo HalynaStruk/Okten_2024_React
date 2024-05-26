@@ -1,22 +1,21 @@
-import React, {FC, useState} from "react";
+import React, {FC, useRef, useState} from "react";
 import {UserModel} from "../../models/UserModel";
-import {PostModel} from "../../models/PostModel";
+import Comments from "../Comments/Comments";
 
-type IProps = { item: UserModel, getPostsFromUsers: (id: number) => void }
+type IProps = { item: UserModel}
 
-const User: FC<IProps> = ({item, getPostsFromUsers}) => {
+const User: FC<IProps> = ({item}) => {
 
      const postsDetail = () => {
          getPostsFromUsers(item.id);
-         console.log(item.id);
      }
-    // const [userId, setUserId] = useState<number | null>(null)
+
+    const [userId, setUserId] = useState<number | null>(null)
     //
-    // const getPostsFromUsers = (id: number) => {
-    //     console.log(id);
-    //     setUserId(id)
-    // }
-    // console.log(userId);
+    const getPostsFromUsers = (id: number) => {
+        setUserId(id)
+    }
+
     return (
         <div>
             <h2>{item.id}. {item.firstName} {item.lastName}</h2>
@@ -27,6 +26,7 @@ const User: FC<IProps> = ({item, getPostsFromUsers}) => {
             <br/>
             <button onClick={postsDetail}>Get user's posts</button>
             <hr/>
+            <Comments userId={userId}/>
         </div>
     );
 };

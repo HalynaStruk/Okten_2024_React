@@ -8,16 +8,16 @@ interface IProps {
 }
 
 const Comments: FC<IProps> = ({userId}) => {
-    console.log(userId);
-    const [posts, setPosts] = useState<PostModel[]>([])
+
+    const [posts, setPosts] = useState<PostModel[]>([]);
+
     useEffect(() => {
         if (!userId) return;
         getPostsByUserID(userId).then(({data: {posts}}) => {
         setPosts(posts);
-        console.log(posts);
         })
     }, [userId])
-    console.log(posts);
+
     return (
         <div>
             {
