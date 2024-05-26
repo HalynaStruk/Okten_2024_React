@@ -7,7 +7,9 @@ const ToggleComponent: FC = () => {
 
     return (
         <div>
-            <p>The current value is {isToggled.toString()}</p>
+            <p><b>Task 1.</b> useToggle - custom React hook that allows a component to toggle a value between true and false
+                import useState from react</p>
+            <p>The current value is <b>{isToggled.toString()}</b></p>
             <button onClick={toggle}>Toggle</button>
         </div>
     );
