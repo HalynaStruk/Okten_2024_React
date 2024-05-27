@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ToggleComponent from "./components/Toggle";
 import PreviousValue from "./components/PreviousValue";
+import StoreValue from "./components/StoreValue";
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <div>
           <ToggleComponent/>
           <PreviousValue/>
+          <StoreValue/>
       </div>
   );
 };
