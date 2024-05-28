@@ -10,7 +10,7 @@ const PreviousValue: FC = () => {
             <p><b>Task 2.</b> usePrevious - hook that allows a component to keep track of the previous value of a variable</p>
             <p>Current count: {count}</p>
             <p>Previous count: <b>{prevCount}</b></p>
-            <button onClick={() => setCount(count + 5)}>Increment +5</button>
+            <button onClick={() => setCount(count + 6)}>Increment +5</button>
         </div>
     );
 }
