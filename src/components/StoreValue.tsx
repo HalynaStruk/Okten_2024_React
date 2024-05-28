@@ -1,15 +1,17 @@
 import React, {FC} from "react";
-import UseStorage from "../hooks/useStorage";
+import useStorage from "../hooks/useStorage";
 
 const StoreValue: FC = () => {
 
-       UseStorage('user1', {name: 'ivan', age: 30});
-    // UseStorage('user2', {name: 'maksym', age: 25});
-    // UseStorage('user3', {name: 'maria', age: 25});
+    useStorage('user1', {name: 'Ivan', age: 30});
+
+    const item: any = localStorage.getItem('user1');
+    let user1 = JSON.parse(item);
 
     return (
         <div>
-
+            <p><b>Task.3</b> useStorage - hook that allows a component to store a value in the browser's LocalStorage</p>
+            {user1.name} {user1.age}
         </div>
     );
 };
