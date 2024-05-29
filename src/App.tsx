@@ -11,9 +11,19 @@ const App = () => {
 
   return (
       <div>
+          <p>Uncotrollable Form</p>
           <FormComponentUncotrollable/>
+          <hr/>
+
+          <p>useForm</p>
           <FormComponent/>
+          <hr/>
+
+          <p>useForm validation</p>
           <FormComponentValidation/>
+          <hr/>
+
+          <p>useForm validation joi</p>
           <FormComponentValidationJOI/>
       </div>
   );
