@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, {AxiosResponse} from "axios";
 import {IProps} from "../components/FormPostComponent";
 
 let axiosInstance = axios.create({
@@ -10,7 +10,7 @@ let axiosInstance = axios.create({
 
 const postService =  {
 
-    postSave: (post: IProps) => {
+    postSave: (post: IProps): Promise<AxiosResponse> => {
         return axiosInstance.post(`/posts`, post)
     }
 }
