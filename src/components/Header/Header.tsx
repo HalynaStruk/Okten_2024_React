@@ -6,6 +6,7 @@ const Header = () => {
         <div className={css.Header}>
             <NavLink to={'/users'}>Users</NavLink>
             <NavLink to={'/posts'}>Posts</NavLink>
+            <NavLink to={'/comments'}>Comments</NavLink>
         </div>
     );
 };
