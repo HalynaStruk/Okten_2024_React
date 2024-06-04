@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {IUserModel} from "../model/IUserModel";
 import {userApiService} from "../services/api.service";
+import {UserComponent} from "./UserComponent";
 
 const UsersComponent = () => {
 
@@ -11,7 +12,8 @@ const UsersComponent = () => {
 
     return (
         <div>
-            {users.map(user => <div key={user.id}>{user.name}</div>)}        </div>
+            {users.map(user => <UserComponent key={user.id} user={user}/>)}
+        </div>
     );
 };
 
