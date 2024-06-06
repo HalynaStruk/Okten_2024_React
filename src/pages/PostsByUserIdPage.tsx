@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {Outlet, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {IPost} from "../interfaces/postInterface";
 import {userService} from "../services/userService";
@@ -16,6 +16,7 @@ const PostsByUserIdPage = () => {
     return (
         <div>
             <PostsByUserId posts={posts}/>
+            <Outlet/>
         </div>
     );
 };

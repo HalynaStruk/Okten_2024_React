@@ -14,7 +14,11 @@ const router = createBrowserRouter([
             {index: true, element:<Navigate to={'users'}/>},
             {path:'users', element: <UsersPage/>,
                 children:[
-                    {path:':id', element:<PostsByUserIdPage/>}
+                    {path:':id', element:<PostsByUserIdPage/>,
+                        children:[
+                            {path: ':postId', element: <CommentsPage/>}
+                        ]
+                    }
                 ]
             },
             {path:'posts', element: <PostsPage/>,

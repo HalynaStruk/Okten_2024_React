@@ -1,0 +1,8 @@
+.PostsContainer{
+    display: flex;
+}
+.CommentsContainer{
+    margin: 8px;
+    padding: 8px;
+    height: 45%;
+}
