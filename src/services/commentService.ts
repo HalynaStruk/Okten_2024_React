@@ -4,7 +4,7 @@ import {apiService} from "./apiService";
 import {urls} from "../urls/urls";
 
 const commentService = {
-    getAll: (postId:number):IRes<IComment[]> => apiService.get(urls.posts+'/'+postId+urls.comments)
+    getAll: (postId:string):IRes<IComment[]> => apiService.get(urls.posts+'/'+postId+urls.comments)
 }
 
 export {
