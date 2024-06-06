@@ -1,11 +1,13 @@
-import {Users} from "../components/UsersContainer/Users";
+import Users from "../components/UsersContainer/Users";
+import {Outlet} from "react-router-dom";
 
 const UsersPage = () => {
     return (
         <div>
             <Users/>
+            <Outlet/>
         </div>
     );
 };
 
-export {UsersPage};
+export default UsersPage;

@@ -18,4 +18,4 @@ const Post:FC<IProps> = ({post}) => {
     );
 };
 
-export {Post};
+export default Post;

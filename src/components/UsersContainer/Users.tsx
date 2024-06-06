@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {IUser} from "../../interfaces/userInterface";
 import {userService} from "../../services/userService";
-import {User} from "./User";
+import User from "./User";
 
 const Users = () => {
     const [users, setUsers] = useState<IUser[]>([]);
@@ -16,4 +16,4 @@ const Users = () => {
     );
 };
 
-export {Users};
+export default Users;

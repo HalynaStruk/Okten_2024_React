@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {IPost} from "../../interfaces/postInterface";
 import {postService} from "../../services/postService";
-import {Post} from "./Post";
+import Post from "./Post";
 
 const Posts = () => {
     const [posts, setPosts] = useState<IPost[]>([]);
@@ -15,4 +15,4 @@ const Posts = () => {
     );
 };
 
-export {Posts};
+export default Posts;

@@ -6,7 +6,7 @@ import {IPost} from "../interfaces/postInterface";
 
 const userService = {
     getAll: (): IRes<IUser[]> => apiService.get(urls.users),
-    getPostsByUserId: (userId:number): IRes<IPost[]> => apiService.get(urls.users+'/'+userId+urls.posts)
+    getPostsByUserId: (userId:string): IRes<IPost[]> => apiService.get(urls.users+'/'+userId+urls.posts)
 }
 
 export {

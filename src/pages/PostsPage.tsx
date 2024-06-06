@@ -1,4 +1,4 @@
-import {Posts} from "../components/PostsContainer/Posts";
+import Posts from "../components/PostsContainer/Posts";
 
 const PostsPage = () => {
     return (
@@ -8,4 +8,4 @@ const PostsPage = () => {
     );
 };
 
-export {PostsPage};
+export default PostsPage;

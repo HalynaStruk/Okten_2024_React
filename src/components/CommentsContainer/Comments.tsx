@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {IComment} from "../../interfaces/commentInterface";
 import {commentService} from "../../services/commentService";
 import {Comment} from "./Comment";

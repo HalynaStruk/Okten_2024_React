@@ -1,0 +1,9 @@
+.UserContainer {
+    display: grid;
+    grid-template-columns: 10% 18% 18% 26% 18%;
+    border: gray 2px solid;
+    margin: 4px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
