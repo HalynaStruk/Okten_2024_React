@@ -1,5 +1,6 @@
 import axios from "axios";
 import {AuthDataModel} from "../models/AuthDataModel";
+import {ITokenObtainPair} from "../models/ITokenObtainPair";
 
 const axiosInstance = axios.create({
     baseURL: 'http://owu.linkpc.net/carsAPI/v2',
@@ -8,13 +9,27 @@ const axiosInstance = axios.create({
 
 const authService = {
     authentication: async (authData: AuthDataModel): Promise<boolean> => {
-        const response = await axiosInstance.post('/auth', authData)
-        return !!(response.data.access && response.data.refresh);
+        let response;
+        try {
+            response = await axiosInstance.post<ITokenObtainPair>('/auth', authData);
+            localStorage.setItem('tokenPair', JSON.stringify(response.data));
+        } catch (e) {
+            console.log(e);
+        }
+        return !!(response?.data?.access && response?.data?.refresh);
+
     },
     refresh: () => {}
 
 }
 
+const carService = {
+    getCars: async () => {
+
+    }
+}
+
 export {
-    authService
+    authService,
+    carService
 }

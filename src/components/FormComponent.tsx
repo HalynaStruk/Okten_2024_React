@@ -21,6 +21,7 @@ const FormComponent = () => {
             <form onSubmit={handleSubmit(authenticate)}>
                 <input type="text" {...register('username')}/>
                 <input type="text" {...register('password')}/>
+                <button>auth me</button>
             </form>
         </div>
     );
